@@ -1,10 +1,8 @@
-var friends = [{
-  name: "John Doe",
-  photo: "N/A",
-  score: [3,6,8]
-}];
+// dependencies
+var path = require("path");
 
-
+// load data
+var friends = require(path.join(__dirname,"../data/friends.js"));
 
 module.exports = function(app) {
 
