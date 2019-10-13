@@ -9,13 +9,12 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 // route paths
-var htmlRoutes = (path.join(__dirname),"./app/routing/htmlRoutes.js")
+var apiRoutes = (path.join(__dirname, "./app/routing/apiRoutes.js"));
+var htmlRoutes = (path.join(__dirname),"./app/routing/htmlRoutes.js");
 
 // routing
-console.log(htmlRoutes);
-
+require(apiRoutes)(app); 
 require(htmlRoutes)(app);
-// require("./app/routing/apiRoutes")(app); // not ready yet
 
 app.listen(PORT, function(){
   console.log(`App listening on http://localhost:${PORT}`)
