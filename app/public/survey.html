@@ -1,12 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Friend Finder Survey</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <h1>Friend Finder Survey</h1>
+  <div class="container">
+
+    <h1>Survey Questions</h1>
+
+    <form method="POST" action="/api/friends">
+
+      <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name (Required)</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group row">
+        <label for="imgLink" class="col-sm-2 col-form-label">Link to Photo Image (Required)</label>
+        <input type="text" class="form-control" id="imgLink" required>
+      </div>
+
+      <!-- question-1 -->
+      <div>
+        <h3><strong>Question 1</strong></h3>
+        <h4>I'm very extroverted</h4>
+        <select class="chosen-select" id="question-1">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-2 -->
+      <div>
+        <h3><strong>Question 2</strong></h3>
+        <h4>I enjoy sports</h4>
+        <select class="chosen-select" id="question-2">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-3 -->
+      <div>
+        <h3><strong>Question 3</strong></h3>
+        <h4>I enjoy movies</h4>
+        <select class="chosen-select" id="question-3">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-4 -->
+      <div>
+        <h3><strong>Question 4</strong></h3>
+        <h4>I enjoy music</h4>
+        <select class="chosen-select" id="question-4">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-5 -->
+      <div>
+        <h3><strong>Question 5</strong></h3>
+        <h4>I enjoy technology</h4>
+        <select class="chosen-select" id="question-5">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-6 -->
+      <div>
+        <h3><strong>Question 6</strong></h3>
+        <h4>iPhone is better than Android</h4>
+        <select class="chosen-select" id="question-6">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-7 -->
+      <div>
+        <h3><strong>Question 7</strong></h3>
+        <h4>OSX is better than Windows</h4>
+        <select class="chosen-select" id="question-7">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-8 -->
+      <div>
+        <h3><strong>Question 8</strong></h3>
+        <h4>Windows is better than OSX</h4>
+        <select class="chosen-select" id="question-8">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-9 -->
+      <div>
+        <h3><strong>Question 9</strong></h3>
+        <h4>Linux is better than both</h4>
+        <select class="chosen-select" id="question-9">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+      <!-- question-10 -->
+      <div>
+        <h3><strong>Question 10</strong></h3>
+        <h4>Pizza is the best food</h4>
+        <select class="chosen-select" id="question-10">
+          <option value=""></option>
+          <option value="1">1 (Strongly Disagree)</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+
+
+      <div class="form-group row mt-3" >
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary">Submit Answers</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+
 </body>
+
 </html>
