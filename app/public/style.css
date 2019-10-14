@@ -2,3 +2,11 @@
 .container{
   width: 960px;
 }
+
+#resultsModal{
+  z-index: 3;
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  display: block;
+}
