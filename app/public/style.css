@@ -3,10 +3,7 @@
   width: 960px;
 }
 
-#resultsModal{
-  z-index: 3;
-  position: fixed;
-  left: 30%;
-  top: 20%;
-  display: block;
+#match-img{
+  max-width: 425px;
+  min-width: 425px;
 }
