@@ -25,8 +25,18 @@ $(document).ready(function() {
     };
     console.log(userForm);
 
-    $.post("/api/friends", userForm).then(function(){
-      console.log("New User added")
+    $.post("/api/friends", userForm).then(function(response){
+      console.log("New User added");
+      console.log(response);
+
+      var modalBody = `
+      <h2 id="match-name">${response.name}</h2>
+      <img id="match-img" src="${response.photo}"
+      alt="">
+      `
+      $(".modal-body").append(modalBody);
+
+
     });
 
 
