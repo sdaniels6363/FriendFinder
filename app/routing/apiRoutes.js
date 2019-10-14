@@ -26,13 +26,16 @@ module.exports = function (app) {
 
       // check to see if the new user matches and existing user
       if ((newFriend.name === match.name) && (newFriend.photo === match.photo)) {
-        return false;
+        continue;
       }
 
       var matchScore = match.score; // store match's scores 
       var differences = []; // empty array to calculate the differences
 
       for (var y = 0; y < 10; y++) {
+        // convert submitted data from string to int
+        newUserScore[y] = parseInt(newUserScore[y]);
+
         // loop to determine difference question by question
         var newUser = newUserScore[y];
         var matchUser = matchScore[y];
