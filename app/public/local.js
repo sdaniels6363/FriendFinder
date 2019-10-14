@@ -34,7 +34,8 @@ $(document).ready(function() {
       <img id="match-img" src="${response.photo}"
       alt="">
       `
-      $(".modal-body").append(modalBody);
+      $(".modal-body").empty(); //  remove any existing content
+      $(".modal-body").append(modalBody); // insert html into modal body
 
 
     });
